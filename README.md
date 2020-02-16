@@ -13,12 +13,16 @@ For backbone models: we use
 1. [sentence-transformers 0.2.4.1](https://github.com/UKPLab/sentence-transformers)
 2. [transformers v2.2.1](https://github.com/huggingface/transformers)
 
-## Get Started
 ```
+    conda create -n SBERT-WK python=3.7
     conda install numpy
-    conda install numpy
+    conda install pytorch=1.3 torchvision cudatoolkit=10.1 -c pytorch
+    pip install transformers==2.2.1
+    conda install -c anaconda scikit-learn
+    pip install -U sentence-transformers==0.2.4.1
+```
 
-```
+## Get Started
 
 
 
