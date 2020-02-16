@@ -4,6 +4,7 @@ Pre-trained language models are quite powerful in a wide range of NLP tasks. But
 
 Many thanks for [Transformer repo](https://github.com/huggingface/transformers) and [Sentence-BERT repo](https://github.com/UKPLab/sentence-transformers) in providing pretained models and easy to use architecture. Note that our model is not focus on further tuning with sentence objective. But find ways to merge the learned token representation across layers and compute sentence embedding with better quality.
 
+## Setup
 
 
 ## Citing and Authors
