@@ -4,6 +4,8 @@ Pre-trained language models are quite powerful in a wide range of NLP tasks. But
 
 Note that our model is not focus on further tuning with sentence objective. But find ways to merge the learned token representation across layers and compute sentence embedding with better quality.
 
+Details of our method can be found in our publication: [SBERT-WK]()
+
 ## Setup
 We are using Python 3.7 and the model is implemented with Pytorch 1.3.
 
