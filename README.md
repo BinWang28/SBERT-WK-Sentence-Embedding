@@ -8,9 +8,9 @@ Note that our model is not focus on further tuning with sentence objective. But 
 We are using Python 3.7 and the model is implemented with Pytorch 1.3.
 For backbone models: we use 
 
-(sentence-transformers 0.2.4.1)[https://github.com/UKPLab/sentence-transformers]
+[sentence-transformers 0.2.4.1](https://github.com/UKPLab/sentence-transformers)
 
-(transformers v2.2.1)[https://github.com/huggingface/transformers]
+[transformers v2.2.1](https://github.com/huggingface/transformers)
 
 ## Get Started
 
