@@ -15,7 +15,9 @@ For backbone models: we use
 
 ## Get Started
 ```
-    dd
+    conda install numpy
+    conda install numpy
+
 ```
 
 
