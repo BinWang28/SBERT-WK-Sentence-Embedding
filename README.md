@@ -22,7 +22,12 @@ For backbone models: we use
 
 ## Get Started to Duplicate the result from the Paper
 
+**First**, clone our code.
 
+**Second**, download [SentEval](https://github.com/facebookresearch/SentEval) and put it in the folder and rename it 
+```
+    ./SBERT-WK-Sentence-Embedding-master/SentEval
+```
 
 ## Performance
 
