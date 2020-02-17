@@ -80,7 +80,7 @@ Choose tasks to evaluate on:
 |    **SBERT-WK**    | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
 |--------------------|-------|-------|-------|-------|-------|-------|--------| 
 | bert-base-uncased  |
-| bert-base-nli      |
+| bert-base-nli      | 70.22 | 68.13 | 75.46 | 76.94 | 74.51 | 80.00 | 87.38  |
 | bert-base-nli-stsb |
 | bert-large-nli     |
 | bert-large-nli-stsb|
