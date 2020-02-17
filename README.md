@@ -18,7 +18,6 @@ For backbone models: we use
     conda install pytorch=1.3 torchvision cudatoolkit=10.1 -c pytorch
     pip install transformers==2.2.1
     conda install -c anaconda scikit-learn
-    pip install -U sentence-transformers==0.2.4.1
 ```
 
 ## Get Started
