@@ -1,5 +1,5 @@
 # SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models
-![](figure1_v1.png =200x200)
+![](figure1_v1.png =250x)
 
 Pre-trained language models are quite powerful in a wide range of NLP tasks. But current models mostly provide word/token level representations. How to obtain good sentence representation from deep contextualized models remains challenging. Previous approaches includes averaging token representations or use CLS tokens provides rather poor performance in either textual similarity tasks, clustering and supervised tasks. In this work, we provide a new approach in finding sentence representations by dissecting deep contextualized models. Through geometric analysis, our model is capable in finding salient components in representation arocss layers and unified token representations. We evaluate our approach on a wide range of tasks and showed its effectiveness.
 
