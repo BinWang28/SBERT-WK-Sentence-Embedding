@@ -20,7 +20,7 @@ For backbone models: we use
     conda install -c anaconda scikit-learn
 ```
 
-## Get Started
+## Get Started to Duplicate the result from the Paper
 
 
 
