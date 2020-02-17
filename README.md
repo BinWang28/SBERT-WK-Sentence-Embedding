@@ -10,8 +10,7 @@ Details of our method can be found in our publication: [SBERT-WK]()
 We are using Python 3.7 and the model is implemented with Pytorch 1.3.
 
 For backbone models: we use 
-1. [sentence-transformers 0.2.4.1](https://github.com/UKPLab/sentence-transformers)
-2. [transformers v2.2.1](https://github.com/huggingface/transformers)
+[transformers v2.2.1](https://github.com/huggingface/transformers)
 
 ```
     conda create -n SBERT-WK python=3.7
@@ -50,3 +49,4 @@ http://mcl.usc.edu/
 ## Acknowledge
 
 Many thanks for [Transformer repo](https://github.com/huggingface/transformers) and [Sentence-BERT repo](https://github.com/UKPLab/sentence-transformers) in providing pretained models and easy to use architecture.
+Thanks for SentEval for evlaluation toolkit. [SentEval](https://github.com/facebookresearch/SentEval)
