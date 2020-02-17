@@ -44,8 +44,8 @@ Download data for STS and downstream tasks
 ```
 We have shared 7 models from the https://huggingface.co/models. All the models can be easily accessed by changing the model_type in the above command.
 '''
---model_type 'binwang/bert-base-nli' #
---model_type 'binwang/bert-base-nli' #
+    --model_type 'binwang/bert-base-nli' #
+    --model_type 'binwang/bert-base-nli' #
 '''
 
 
