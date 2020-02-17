@@ -44,14 +44,13 @@ Download data for STS and downstream tasks
 ```
 We have shared 7 models from the https://huggingface.co/models. All the models can be easily accessed by changing the model_type in the above command.
 ```
-    --model_type 'binwang/bert-base-nli' #
-    --model_type 'binwang/bert-base-nli-stsb' #
-    --model_type 'binwang/bert-base-uncased' #
-    --model_type 'binwang/bert-large-nli' #
-    --model_type 'binwang/bert-large-nli-stsb' #
-    --model_type 'binwang/roberta-base' #
-    --model_type 'binwang/xlnet-base-cased' #
-
+    --model_type 'binwang/bert-base-uncased'    # Original BERT Model                        (12 layers)
+    --model_type 'binwang/roberta-base'         # Original RoBERTa Model                     (12 layers)
+    --model_type 'binwang/xlnet-base-cased'     # Original XLNET Model                       (12 layers)
+    --model_type 'binwang/bert-base-nli' #      # BERT Model finetuned on NLI data           (12 layers)
+    --model_type 'binwang/bert-base-nli-stsb'   # BERT Model finetuned on NLI and STSB data  (12 layers)
+    --model_type 'binwang/bert-large-nli'       # Large BERT finetuned on NLI data           (24 layers)
+    --model_type 'binwang/bert-large-nli-stsb'  # Large BERT finetuned on NLI and STSB data  (24 layers)
 ```
 
 
