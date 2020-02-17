@@ -37,7 +37,7 @@ Download data for STS and downstream tasks
 ```
     python SBERT_WK.py \
         --model_type 'binwang/bert-base-nli' \
-        --embed_method 'ave_last_hidden'  \
+        --embed_method 'dissecting'  \
         --max_seq_length 128 \
         --batch_size 64 \
         --context_window_size 2 \
@@ -52,7 +52,11 @@ We have shared 7 models from the https://huggingface.co/models. All the models c
     --model_type 'binwang/bert-large-nli'       # Large BERT finetuned on NLI data           (24 layers)
     --model_type 'binwang/bert-large-nli-stsb'  # Large BERT finetuned on NLI and STSB data  (24 layers)
 ```
-
+The way to obtain the sentence embedding from the deep contextualized model can be two ways:
+```
+    --embed_method 'dissecting'
+    --embed_method 'ave_last_hidden'
+```
 
 ## Performance
 
