@@ -69,8 +69,8 @@ Choose tasks to evaluate on:
 ## Performance on STS tasks
 
 |Model | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
-|---|---|---|---| 
-| Avg. GloVe |---|---|---|---|
+|------|-------|-------|-------|-------|-------|-------|--------| 
+| Avg. GloVe |
 |   |   |   |   |   |
 |   | s|   |   |   |
 |   |   |   |   |   |
