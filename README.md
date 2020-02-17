@@ -75,8 +75,8 @@ Choose tasks to evaluate on:
 | USE        | s|   |   |   |
 | BERT - CLS | |
 | Avg. BERT  |   |   |   |   |
-| **Ours**   |
-|            |
+| **SBERT-WK** | | |
+| bert-base-uncases |
 
 ## Citing and Authors
 If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/xx.xx):
