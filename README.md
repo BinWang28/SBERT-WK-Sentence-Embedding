@@ -28,6 +28,14 @@ For backbone models: we use
 ```
     ./SBERT-WK-Sentence-Embedding-master/SentEval
 ```
+Download data for STS and downstream tasks
+```
+    ./SBERT-WK-Sentence-Embedding-master/SentEval/data/downstream/get_transfer_data.bash
+```
+
+**Third**, run our bash file to reproduce the result.
+
+
 
 ## Performance
 
