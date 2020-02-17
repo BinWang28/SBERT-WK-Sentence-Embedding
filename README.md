@@ -71,9 +71,12 @@ Choose tasks to evaluate on:
 |Model | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
 |------|-------|-------|-------|-------|-------|-------|--------| 
 | Avg. GloVe |
-|   |   |   |   |   |
-|   | s|   |   |   |
-|   |   |   |   |   |
+| InferSent  |   |   |   |   |
+| USE        | s|   |   |   |
+| BERT - CLS | |
+| Avg. BERT  |   |   |   |   |
+| **Ours**   |
+|            |
 
 ## Citing and Authors
 If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/xx.xx):
