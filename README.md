@@ -10,13 +10,13 @@ Details of our method can be found in our publication: [SBERT-WK]()
 We are using Python 3.7 and the model is implemented with Pytorch 1.3.
 
 For backbone models: we use 
-[transformers v2.2.1](https://github.com/huggingface/transformers)
+[transformers v2.2.2](https://github.com/huggingface/transformers)
 
 ```
     conda create -n SBERT-WK python=3.7
     conda install numpy
     conda install pytorch=1.3 torchvision cudatoolkit=10.1 -c pytorch
-    pip install transformers==2.2.1
+    pip install transformers==2.2.2
     conda install -c anaconda scikit-learn
 ```
 
