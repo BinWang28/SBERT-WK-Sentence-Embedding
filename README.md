@@ -41,6 +41,7 @@ Download data for STS and downstream tasks
         --max_seq_length 128 \
         --batch_size 64 \
         --context_window_size 2 \
+        --tasks 'sts' \
 ```
 We have shared 7 models from the https://huggingface.co/models. All the models can be easily accessed by changing the model_type in the above command.
 ```
@@ -56,6 +57,13 @@ The way to obtain the sentence embedding from the deep contextualized model can 
 ```
     --embed_method 'dissecting'
     --embed_method 'ave_last_hidden'
+```
+Choose tasks to evaluate on:
+```
+    --tasks 'sts'
+    --tasks 'supervised'
+    --tasks 'probing'
+    --tasks 'all'
 ```
 
 ## Performance
