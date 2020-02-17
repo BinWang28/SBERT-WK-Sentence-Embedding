@@ -66,10 +66,10 @@ Choose tasks to evaluate on:
     --tasks 'all'
 ```
 
-## Performance
+## Performance on STS tasks
 
-|s | s|   |   |   |
-|---|---|---|---|---|
+|Model | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
+|Avg. GloVe |---|---|---|---|
 |   |   |   |   |   |
 |   | s|   |   |   |
 |   |   |   |   |   |
