@@ -66,24 +66,24 @@ Choose tasks to evaluate on:
     --tasks 'all'
 ```
 
-## Performance on STS tasks
+## Performance on STS tasks (Spearman)
 
-|Model | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
-|------|-------|-------|-------|-------|-------|-------|--------| 
-| Avg. GloVe |
+|    Model   | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
+|------------|-------|-------|-------|-------|-------|-------|--------| 
+| Avg. GloVe | 53.28 | 50.76 | 55.63 | 59.22 | 57.88 | 62.96 | 71.83  | 
 | InferSent  |   |   |   |   |
 | USE        | s|   |   |   |
 | BERT - CLS | |
 | Avg. BERT  |   |   |   |   |
 
-| **SBERT-WK**       | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
-|------|-------      |-------|-------|-------|-------|-------|--------| 
-| |
+|    **SBERT-WK**    | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
+|--------------------|-------|-------|-------|-------|-------|-------|--------| 
 | bert-base-uncased  |
 | bert-base-nli      |
 | bert-base-nli-stsb |
 | bert-large-nli     |
 | bert-large-nli-stsb|
+
 
 ## Citing and Authors
 If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/xx.xx):
