@@ -34,6 +34,15 @@ Download data for STS and downstream tasks
 ```
 
 **Third**, run our bash file to reproduce the result.
+```
+    python SBERT_WK.py \
+        --model_type 'binwang/bert-base-nli' \
+        --embed_method 'ave_last_hidden'  \
+        --max_seq_length 128 \
+        --batch_size 64 \
+        --context_window_size 2 \
+```
+We have shared 7 models from the https://huggingface.co/models
 
 
 
