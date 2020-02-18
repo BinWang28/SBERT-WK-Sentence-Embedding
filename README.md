@@ -7,7 +7,7 @@ Pre-trained language models are quite powerful in a wide range of NLP tasks. But
 
 Note that our model is not focus on further tuning with sentence objective. But find ways to merge the learned token representation across layers and compute sentence embedding with better quality.
 
-Details of our method can be found in our publication: [SBERT-WK]() The code and pretrained model can also be find here: [code](https://drive.google.com/drive/folders/1ldbNo1paTYHo8wbtfwII-DvXTD6rFSfr?usp=sharing), [pre_trained model](https://drive.google.com/open?id=1zRqluT2-R0VywWKE-HzMK2sOP3sNPhtY)
+Details of our method can be found in our publication: [SBERT-WK](https://arxiv.org/abs/2002.06652) The code and pretrained model can also be find here: [code](https://drive.google.com/drive/folders/1ldbNo1paTYHo8wbtfwII-DvXTD6rFSfr?usp=sharing), [pre_trained model](https://drive.google.com/open?id=1zRqluT2-R0VywWKE-HzMK2sOP3sNPhtY)
 
 ## Setup
 We are using Python 3.7 and the model is implemented with Pytorch 1.3.
@@ -90,7 +90,7 @@ Choose tasks to evaluate on:
 
 
 ## Citing and Authors
-If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/xx.xx):
+If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/2002.06652):
 
 ``` 
 @inproceedings{xxx,
@@ -99,6 +99,8 @@ If you find our model is useful in your research, please consider cite our paper
     booktitle = "xx",
 }
 ```
+
+
 
 Contact person: Bin Wang, bwang28c@gmail.com
 
