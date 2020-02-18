@@ -93,14 +93,13 @@ Choose tasks to evaluate on:
 If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/2002.06652):
 
 ``` 
-@inproceedings{xxx,
+@inproceedings{SBERT-WK,
     title = "SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models",
-    author = "xxx",
-    booktitle = "xx",
+    author = "Wang, Bin and Kuo, C-C Jay",
+    journal={arXiv preprint arXiv:2002.06652},
+    year={2020}
 }
 ```
-
-
 
 Contact person: Bin Wang, bwang28c@gmail.com
 
