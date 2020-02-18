@@ -94,8 +94,8 @@ If you find our model is useful in your research, please consider cite our paper
 
 ``` 
 @inproceedings{SBERT-WK,
-    title = "SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models",
-    author = "Wang, Bin and Kuo, C-C Jay",
+    title = {SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models},
+    author = {Wang, Bin and Kuo, C-C Jay},
     journal={arXiv preprint arXiv:2002.06652},
     year={2020}
 }
