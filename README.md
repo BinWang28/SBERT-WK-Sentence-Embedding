@@ -112,3 +112,9 @@ http://mcl.usc.edu/
 
 Many thanks for [Transformer repo](https://github.com/huggingface/transformers) and [Sentence-BERT repo](https://github.com/UKPLab/sentence-transformers) in providing pretained models and easy to use architecture.
 Thanks for SentEval for evlaluation toolkit. [SentEval](https://github.com/facebookresearch/SentEval)
+
+
+## TODO:
+Finished Performance Part.
+
+Provide an convenient interface for sentence embedding.
