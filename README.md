@@ -22,9 +22,7 @@ Our model is applicable to any deep contextualized models and requires no furthe
 
 ## Installation
 We are using Python 3.7 and the model is implemented with Pytorch 1.3.
-
-For backbone models: we use 
-[transformers v2.2.2](https://github.com/huggingface/transformers)
+We also use [transformers v2.2.2](https://github.com/huggingface/transformers)
 
 ```
     conda create -n SBERT-WK python=3.7
@@ -36,6 +34,17 @@ For backbone models: we use
 
 ## Support Architecture
 
+1. bert-base-uncased:
+2. bert-base-nli:
+3. bert-base-nli-stsb:
+4. bert-large-uncased:
+5. bert-large-nli:
+6. bert-large-nli-stsb:
+7. roberta-base
+8. xlnet-base-cased
+3. bert-large:
+4. bert-large-nli:
+5. 
 
 
 ## Quick Usage Guide
