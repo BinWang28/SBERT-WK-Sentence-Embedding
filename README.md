@@ -58,6 +58,44 @@ We also use [transformers v2.2.2](https://github.com/huggingface/transformers)
 
 ## Reproduce the result
 
+Download data for STS and downstream tasks
+```
+./SBERT-WK-Sentence-Embedding-master/SentEval/data/downstream/get_transfer_data.bash
+```
+
+Run our code file to reproduce the result. (example given by bert-base-nli)
+```
+python SBERT_WK.py \
+    --model_type 'binwang/bert-base-nli' \
+    --embed_method 'dissecting'  \
+    --max_seq_length 128 \
+    --batch_size 64 \
+    --context_window_size 2 \
+    --tasks 'sts' \
+```
+We have shared 7 models from the https://huggingface.co/models. All the models can be easily accessed by changing the model_type in the above command.
+```
+    --model_type 'binwang/bert-base-uncased'    # Original BERT Model                        (12 layers)
+    --model_type 'binwang/roberta-base'         # Original RoBERTa Model                     (12 layers)
+    --model_type 'binwang/xlnet-base-cased'     # Original XLNET Model                       (12 layers)
+    --model_type 'binwang/bert-base-nli' #      # BERT Model finetuned on NLI data           (12 layers)
+    --model_type 'binwang/bert-base-nli-stsb'   # BERT Model finetuned on NLI and STSB data  (12 layers)
+    --model_type 'binwang/bert-large-nli'       # Large BERT finetuned on NLI data           (24 layers)
+    --model_type 'binwang/bert-large-nli-stsb'  # Large BERT finetuned on NLI and STSB data  (24 layers)
+```
+The way to obtain the sentence embedding from the deep contextualized model can be two ways:
+```
+    --embed_method 'dissecting'
+    --embed_method 'ave_last_hidden'
+```
+Choose tasks to evaluate on:
+```
+    --tasks 'sts'
+    --tasks 'supervised'
+    --tasks 'probing'
+    --tasks 'all'
+```
+
 ## Performance
 
 ## Citation
@@ -94,52 +132,6 @@ Many thanks for
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-## Get Started to Duplicate the result from the Paper
-
-**First**, clone our code.
-
-**Second**, download [SentEval](https://github.com/facebookresearch/SentEval) and put it in the folder and rename it 
-```
-    ./SBERT-WK-Sentence-Embedding-master/SentEval
-```
-Download data for STS and downstream tasks
-```
-    ./SBERT-WK-Sentence-Embedding-master/SentEval/data/downstream/get_transfer_data.bash
-```
-
-**Third**, run our bash file to reproduce the result.
-```
-    python SBERT_WK.py \
-        --model_type 'binwang/bert-base-nli' \
-        --embed_method 'dissecting'  \
-        --max_seq_length 128 \
-        --batch_size 64 \
-        --context_window_size 2 \
-        --tasks 'sts' \
-```
-We have shared 7 models from the https://huggingface.co/models. All the models can be easily accessed by changing the model_type in the above command.
-```
-    --model_type 'binwang/bert-base-uncased'    # Original BERT Model                        (12 layers)
-    --model_type 'binwang/roberta-base'         # Original RoBERTa Model                     (12 layers)
-    --model_type 'binwang/xlnet-base-cased'     # Original XLNET Model                       (12 layers)
-    --model_type 'binwang/bert-base-nli' #      # BERT Model finetuned on NLI data           (12 layers)
-    --model_type 'binwang/bert-base-nli-stsb'   # BERT Model finetuned on NLI and STSB data  (12 layers)
-    --model_type 'binwang/bert-large-nli'       # Large BERT finetuned on NLI data           (24 layers)
-    --model_type 'binwang/bert-large-nli-stsb'  # Large BERT finetuned on NLI and STSB data  (24 layers)
-```
-The way to obtain the sentence embedding from the deep contextualized model can be two ways:
-```
-    --embed_method 'dissecting'
-    --embed_method 'ave_last_hidden'
-```
-Choose tasks to evaluate on:
-```
-    --tasks 'sts'
-    --tasks 'supervised'
-    --tasks 'probing'
-    --tasks 'all'
-```
 
 ## Performance on STS tasks (Pearson)
 
