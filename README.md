@@ -34,8 +34,11 @@ We also use [transformers v2.2.2](https://github.com/huggingface/transformers)
 
 ## Support Architecture
 
+### Released Architectures
 1. bert-base-uncased:
 1. **Released** bert-base-nli:
+
+### Under-preparation
 1. bert-base-nli-stsb:
 1. bert-large-uncased:
 1. bert-large-nli:
@@ -44,7 +47,7 @@ We also use [transformers v2.2.2](https://github.com/huggingface/transformers)
 1. xlnet-base-cased
 1. bert-large:
 1. bert-large-nli:
-1. 
+
 
 
 ## Quick Usage Guide
