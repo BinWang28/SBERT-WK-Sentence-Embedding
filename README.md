@@ -3,17 +3,24 @@
 <img src="figure1.png" alt="Paris" class="center" width="500">
 </p>
 
+SBERT-WK provides a way to generate sentence embedding by dissecting deep contextualized models. Because pre-trained language models are quite powerful in a wide range of NLP tasks, but how to generate sentence embedding from deep language models is still challenging. Deep models mostly provide word/token level representation. Previous approaches includes averaging token representations or use CLS tokens provides rather poor performance in either textual similarity tasks, clustering and supervised tasks. Through geometric analysis, our model is capable in finding salient components in representation arocss layers and unified token representations. We evaluate our approach on a wide range of tasks and showed its effectiveness.
+
+Our model is applicable to any deep contextualized models and requires no further training. Details of our method can be found in our publication: [SBERT-WK](https://arxiv.org/abs/2002.06652).
+
+
 | Section | Description |
 |-|-|
-| [Setup](#Setup) | Environment Setup |
+| [Installation](#Installation) 									| How to setup the environment  	|
+| [Support Architecture](#Support-Architecture) 					| Current support architectures		|
+| [Quick Usage Guide](#Quick-Usage-Guide)							| A quick guide 					|
+| [Reproduce the result](#Reproduce-the-result)						| Reproduce the result of paper     |
+| [Performance](#Performance)										| Performance Comparison		    |
+| [Citation](#Citation)												| Reference Link		   		 	|
+| [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
 
-Pre-trained language models are quite powerful in a wide range of NLP tasks. But current models mostly provide word/token level representations. How to obtain good sentence representation from deep contextualized models remains challenging. Previous approaches includes averaging token representations or use CLS tokens provides rather poor performance in either textual similarity tasks, clustering and supervised tasks. In this work, we provide a new approach in finding sentence representations by dissecting deep contextualized models. Through geometric analysis, our model is capable in finding salient components in representation arocss layers and unified token representations. We evaluate our approach on a wide range of tasks and showed its effectiveness.
 
-Note that our model is not focus on further tuning with sentence objective. But find ways to merge the learned token representation across layers and compute sentence embedding with better quality.
 
-Details of our method can be found in our publication: [SBERT-WK](https://arxiv.org/abs/2002.06652) The code and pretrained model can also be find here: [code](https://drive.google.com/drive/folders/1ldbNo1paTYHo8wbtfwII-DvXTD6rFSfr?usp=sharing), [pre_trained model](https://drive.google.com/open?id=1zRqluT2-R0VywWKE-HzMK2sOP3sNPhtY)
-
-## Setup
+## Installation
 We are using Python 3.7 and the model is implemented with Pytorch 1.3.
 
 For backbone models: we use 
@@ -26,6 +33,52 @@ For backbone models: we use
     pip install transformers==2.2.2
     conda install -c anaconda scikit-learn
 ```
+
+## Support Architecture
+
+
+
+## Quick Usage Guide
+
+
+## Reproduce the result
+
+## Performance
+
+## Citation
+
+If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/2002.06652):
+
+``` 
+@article{SBERT-WK,
+    title = {{SBERT-WK}: A Sentence Embedding Method By Dissecting BERT-based Word Models},
+    author = {Wang, Bin and Kuo, C-C Jay},
+    journal={arXiv preprint arXiv:2002.06652},
+    year={2020}
+}
+```
+
+Contact person: Bin Wang, bwang28c@gmail.com
+
+http://mcl.usc.edu/
+
+
+## Acknowledge
+
+Many thanks for 
+
+1. [Transformer repo](https://github.com/huggingface/transformers)
+2. [Sentence-BERT repo](https://github.com/UKPLab/sentence-transformers) in providing pretained models and easy to use architecture.
+3. Thanks for SentEval for evlaluation toolkit. [SentEval](https://github.com/facebookresearch/SentEval)
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Get Started to Duplicate the result from the Paper
 
@@ -93,22 +146,6 @@ Choose tasks to evaluate on:
 | bert-base-nli-stsb | 75.53 | 76.34 | 88.62 | 83.06 | 80.96 | 83.02 | 87.79  |
 | bert-large-nli-stsb|
 
-
-## Citing and Authors
-If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/2002.06652):
-
-``` 
-@article{SBERT-WK,
-    title = {{SBERT-WK}: A Sentence Embedding Method By Dissecting BERT-based Word Models},
-    author = {Wang, Bin and Kuo, C-C Jay},
-    journal={arXiv preprint arXiv:2002.06652},
-    year={2020}
-}
-```
-
-Contact person: Bin Wang, bwang28c@gmail.com
-
-http://mcl.usc.edu/
 
 
 
