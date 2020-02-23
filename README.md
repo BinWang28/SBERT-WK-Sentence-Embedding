@@ -25,11 +25,11 @@ We are using Python 3.7 and the model is implemented with Pytorch 1.3.
 We also use [transformers v2.2.2](https://github.com/huggingface/transformers)
 
 ```
-    conda create -n SBERT-WK python=3.7
-    conda install numpy
-    conda install pytorch=1.3 torchvision cudatoolkit=10.1 -c pytorch
-    pip install transformers==2.2.2
-    conda install -c anaconda scikit-learn
+conda create -n SBERT-WK python=3.7
+conda install numpy
+conda install pytorch=1.3 torchvision cudatoolkit=10.1 -c pytorch
+pip install transformers==2.2.2
+conda install -c anaconda scikit-learn
 ```
 
 ## Support Architecture
@@ -54,6 +54,20 @@ We also use [transformers v2.2.2](https://github.com/huggingface/transformers)
 
 
 ## Quick Usage Guide
+
+We provde a script as an example for generate sentence embedding by giving sentences as strings.
+
+Simply run the script
+```
+chmod +x example2.sh
+./example2.sh
+```
+You should see the following interaction asking for sentence:
+<p align="center">
+<img src="figure2.png" alt="Paris" class="center" width="500">
+</p>
+
+
 
 
 ## Reproduce the result
@@ -98,6 +112,26 @@ Choose tasks to evaluate on:
 
 ## Performance
 
+### Performance on STS tasks
+
+|    Model        | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
+|-----------------|-------|-------|-------|-------|-------|-------|--------| 
+| Avg. GloVe      | 52.22 | 49.60 | 54.60 | 56.26 | 51.41 | 64.79 | 79.92  | 
+| InferSent       | 59.33 | 58.85 | 69.57 | 71.26 | 71.46 | 75.74 | 88.35  |
+| USE             | 61.00 | 64.00 | 71.00 | 74.00 | 74.00 | 78.00 | 86.00  |
+| BERT - CLS      | 27.58 | 22.52 | 25.63 | 32.11 | 42.69 | 52.14 | 70.05  |
+| Avg. BERT       | 46.87 | 52.77 | 57.15 | 63.47 | 64.51 | 65.22 | 80.54  |
+| Sen-BERT (base-nli)| 64.61 | 67.54 | 73.22 | 74.34 | 70.13 | 74.09 | 84.23  |
+
+|    **SBERT-WK**    | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
+|--------------------|-------|-------|-------|-------|-------|-------|--------| 
+| bert-base-uncased  |
+| bert-base-nli      | 70.22 | 68.13 | 75.46 | 76.94 | 74.51 | 80.00 | 87.38  |
+| bert-large-nli     | 
+|--------------------|-------|-------|-------|-------|-------|-------|--------| 
+| bert-base-nli-stsb | 75.53 | 76.34 | 88.62 | 83.06 | 80.96 | 83.02 | 87.79  |
+| bert-large-nli-stsb|
+
 ## Citation
 
 If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/2002.06652):
@@ -128,41 +162,3 @@ Many thanks for
 
 
 
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-## Performance on STS tasks (Pearson)
-
-|    Model        | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
-|-----------------|-------|-------|-------|-------|-------|-------|--------| 
-| Avg. GloVe      | 52.22 | 49.60 | 54.60 | 56.26 | 51.41 | 64.79 | 79.92  | 
-| InferSent       | 59.33 | 58.85 | 69.57 | 71.26 | 71.46 | 75.74 | 88.35  |
-| USE             | 61.00 | 64.00 | 71.00 | 74.00 | 74.00 | 78.00 | 86.00  |
-| BERT - CLS      | 27.58 | 22.52 | 25.63 | 32.11 | 42.69 | 52.14 | 70.05  |
-| Avg. BERT       | 46.87 | 52.77 | 57.15 | 63.47 | 64.51 | 65.22 | 80.54  |
-| Sen-BERT (base-nli)| 64.61 | 67.54 | 73.22 | 74.34 | 70.13 | 74.09 | 84.23  |
-
-|    **SBERT-WK**    | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
-|--------------------|-------|-------|-------|-------|-------|-------|--------| 
-| bert-base-uncased  |
-| bert-base-nli      | 70.22 | 68.13 | 75.46 | 76.94 | 74.51 | 80.00 | 87.38  |
-| bert-large-nli     | 
-|--------------------|-------|-------|-------|-------|-------|-------|--------| 
-| bert-base-nli-stsb | 75.53 | 76.34 | 88.62 | 83.06 | 80.96 | 83.02 | 87.79  |
-| bert-large-nli-stsb|
-
-
-
-
-## Acknowledge
-
-Many thanks for [Transformer repo](https://github.com/huggingface/transformers) and [Sentence-BERT repo](https://github.com/UKPLab/sentence-transformers) in providing pretained models and easy to use architecture.
-Thanks for SentEval for evlaluation toolkit. [SentEval](https://github.com/facebookresearch/SentEval)
-
-
-## TODO:
-Finished Performance Part.
-
-Provide an convenient interface for sentence embedding.
