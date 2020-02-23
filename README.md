@@ -39,8 +39,8 @@ We also use [transformers v2.2.2](https://github.com/huggingface/transformers)
 - **bert-base-uncased**: 12 layers, released with paper (1)
 - **bert-base-nli**: 12 layers, released with paper (2)
 
-(1) [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding by Jacob Devlin, Ming-Wei Chang, Kenton Lee and Kristina Toutanov](https://arxiv.org/abs/1810.04805)
-(2) [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084)
+- (1) [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding by Jacob Devlin, Ming-Wei Chang, Kenton Lee and Kristina Toutanov](https://arxiv.org/abs/1810.04805)
+- (2) [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084)
 
 ### Under preparation
 
