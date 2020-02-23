@@ -98,6 +98,8 @@ if __name__ == "__main__":
                         help="Choice of method to obtain embeddings (default: 'ave_last_hidden')")
     parser.add_argument("--context_window_size", type=int, default=2,
                         help='Topological Embedding Context Window Size (default: 2)')
+    parser.add_argument("--layer_start", type=int, default=4,
+                        help='Starting layer for fusion (default: 4)')
     parser.add_argument("--tasks", type=str, default='all',
                         help='choice of tasks to evaluate on') 
     args = parser.parse_args()
@@ -118,12 +120,10 @@ if __name__ == "__main__":
     # Set Model
     params_senteval = vars(args)
 
-    #if params_senteval["model_type"] == 'bert-base-uncased' or 'roberta-base' or 'xlnet-base-cased':
-    if 1:
-        config = AutoConfig.from_pretrained(params_senteval["model_type"])
-        config.output_hidden_states = True
-        tokenizer = AutoTokenizer.from_pretrained(params_senteval["model_type"])
-        model = AutoModelWithLMHead.from_pretrained(params_senteval["model_type"], config=config)
+    config = AutoConfig.from_pretrained(params_senteval["model_type"])
+    config.output_hidden_states = True
+    tokenizer = AutoTokenizer.from_pretrained(params_senteval["model_type"])
+    model = AutoModelWithLMHead.from_pretrained(params_senteval["model_type"], config=config)
 
     params_senteval['tokenizer'] = tokenizer
     params_senteval['model'] = model
@@ -150,10 +150,10 @@ if __name__ == "__main__":
     
     elif args.tasks == 'supervised':
         transfer_tasks = ['MR', 'CR', 'SUBJ', 'MPQA', 'SST2', 'SST5',
-                      'TREC', 'MRPC', 'SICKRelatedness', 'SICKEntailment']
+                      'TREC', 'MRPC', 'SICKEntailment']
     
     elif args.tasks == 'sts':
-        transfer_tasks = ['STS12', 'STS13', 'STS14', 'STS15', 'STS16', 'STSBenchmark']
+        transfer_tasks = ['STS12', 'STS13', 'STS14', 'STS15', 'STS16', 'STSBenchmark', 'SICKRelatedness']
 
     elif args.tasks == 'probing':
         transfer_tasks = ['Length', 'WordContent', 'Depth', 'TopConstituents',

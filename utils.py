@@ -10,6 +10,7 @@ class generate_embedding():
             'ave_last_hidden': self.ave_last_hidden,
             'CLS': self.CLS,
             'dissecting': self.dissecting,
+            'ave_one_layer': self.ave_one_layer,
         }
         
         self.masks = masks
@@ -31,6 +32,25 @@ class generate_embedding():
 
         embedding = np.array(embedding)
         return embedding
+
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    # 'ave_last_hidden': self.ave_last_hidden,
+    def ave_one_layer(self, params, all_layer_embedding):
+        """
+            Average the output from last layer
+        """
+        unmask_num = np.array([sum(mask) for mask in self.masks])
+        
+        embedding = []
+        for i in range(len(unmask_num)):
+            sent_len = unmask_num[i]
+            hidden_state_sen = all_layer_embedding[i][params['layer_start'],:,:]
+            embedding.append(np.mean(hidden_state_sen[:sent_len,:], axis=0))
+
+        embedding = np.array(embedding)
+        return embedding
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     # 'CLS': self.CLS,
@@ -56,7 +76,7 @@ class generate_embedding():
             dissecting deep contextualized model
         """
         unmask_num = np.array([sum(mask) for mask in self.masks]) - 1 # Not considering the last item
-        all_layer_embedding = np.array(all_layer_embedding)[:,4:,:,:] # Start from 4th layers output
+        all_layer_embedding = np.array(all_layer_embedding)[:,params['layer_start']:,:,:] # Start from 4th layers output
 
         embedding = []
         # One sentence at a time
