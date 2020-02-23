@@ -69,7 +69,6 @@ You should see the following interaction asking for sentence:
 
 
 
-
 ## Reproduce the result
 
 Download data for STS and downstream tasks
@@ -110,6 +109,11 @@ Choose tasks to evaluate on:
     --tasks 'all'
 ```
 
+### Or simpy run our provided script to evaluate on STS, Downstream and Probing tasks
+```
+./example1.sh
+```
+
 ## Performance
 
 ### Performance on STS tasks
@@ -129,8 +133,18 @@ Choose tasks to evaluate on:
 | bert-base-nli      | 70.22 | 68.13 | 75.46 | 76.94 | 74.51 | 80.00 | 87.38  |
 | bert-large-nli     | 
 |--------------------|-------|-------|-------|-------|-------|-------|--------| 
-| bert-base-nli-stsb | 75.53 | 76.34 | 88.62 | 83.06 | 80.96 | 83.02 | 87.79  |
-| bert-large-nli-stsb|
+
+
+## More Scripts
+The following scripts are provided to reproduce more results:
+- Sentence-BERT
+```
+```
+
+- :SBERT-WK
+```
+```
+
 
 ## Citation
 
