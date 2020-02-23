@@ -15,6 +15,7 @@ Our model is applicable to any deep contextualized models and requires no furthe
 | [Quick Usage Guide](#Quick-Usage-Guide)							| A quick guide 					|
 | [Reproduce the result](#Reproduce-the-result)						| Reproduce the result of paper     |
 | [Performance](#Performance)										| Performance Comparison		    |
+| [More Scripts](#More-Scripts)                                     | More Scripts to use               |
 | [Citation](#Citation)												| Reference Link		   		 	|
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
 
