@@ -64,7 +64,7 @@ chmod +x example2.sh
 ```
 You should see the following interaction asking for sentence:
 <p align="center">
-<img src="figure2.png" alt="Paris" class="center" width="500">
+<img src="figure2.png" alt="Paris" class="center" width="1000">
 </p>
 
 
