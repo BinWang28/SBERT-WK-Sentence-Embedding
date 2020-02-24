@@ -45,7 +45,7 @@ conda install -c anaconda scikit-learn
 ### Released Architectures
 
 - **bert-base-uncased**: 12 layers, released with paper [BERT](https://arxiv.org/abs/1810.04805)
-- **bert-base-nli**: 12 layers, released with paper [SBERT](https://arxiv.org/abs/1908.10084)
+- **bert-base-nli**: 12 layers, released with paper [Sen-BERT](https://arxiv.org/abs/1908.10084)
 
 
 ### Under preparation
@@ -137,21 +137,28 @@ Choose tasks to evaluate on:
 
 |    **SBERT-WK**    | STS12 | STS13 | STS14 | STS15 | STS16 | STS-B | SICK-R |
 |--------------------|-------|-------|-------|-------|-------|-------|--------| 
-| bert-base-uncased  |
 | bert-base-nli      | 70.22 | 68.13 | 75.46 | 76.94 | 74.51 | 80.00 | 87.38  |
-| bert-large-nli     | 
 |--------------------|-------|-------|-------|-------|-------|-------|--------| 
 
 
 ## More Scripts
 The following scripts are provided to reproduce more results:
-- Sentence-BERT
+- Reproduce the result of Sentence-BERT (bert-base-nli model)
 ```
+./scripts/sentence-bert/bert-base-nli.sh
 ```
 
-- :SBERT-WK
+- Reproduce the result of SBERT-WK (bert-base-nli model)
 ```
+./bert-base-nli/bert-base-nli.sh
 ```
+
+- Reproduce the result of SBERT-WK (bert-base-uncased model)
+```
+TODO
+```
+
+
 
 
 ## Citation
