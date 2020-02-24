@@ -69,11 +69,11 @@ if __name__ == "__main__":
     # -----------------------------------------------
 
     sentence1 = input("\nEnter the first sentence: ")
-    sentence2 = input("\nEnter the second sentence: ")
+    sentence2 = input("Enter the second sentence: ")
 
     sentences = [sentence1, sentence2]
 
-    print("\nThe two sentences we have are:", sentences)
+    print("The two sentences we have are:", sentences)
 
     # -----------------------------------------------
     sentences_index = [tokenizer.encode(s, add_special_tokens=True) for s in sentences]
