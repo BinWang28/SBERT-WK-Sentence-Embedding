@@ -25,8 +25,15 @@ Our model is applicable to any deep contextualized models and requires no furthe
 We are using Python 3.7 and the model is implemented with Pytorch 1.3.
 We also use [transformers v2.2.2](https://github.com/huggingface/transformers)
 
+**Create a new environment**
 ```
 conda create -n SBERT-WK python=3.7
+conda activate SBERT-WK
+```
+
+**Install the dependencies**
+
+```
 conda install numpy
 conda install pytorch=1.3 torchvision cudatoolkit=10.1 -c pytorch
 pip install transformers==2.2.2

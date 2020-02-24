@@ -60,10 +60,10 @@ if __name__ == "__main__":
     # Set Model
     params = vars(args)
 
-    config = AutoConfig.from_pretrained(params["model_type"])
+    config = AutoConfig.from_pretrained(params["model_type"], cache_dir='./cache')
     config.output_hidden_states = True
-    tokenizer = AutoTokenizer.from_pretrained(params["model_type"])
-    model = AutoModelWithLMHead.from_pretrained(params["model_type"], config=config)
+    tokenizer = AutoTokenizer.from_pretrained(params["model_type"], cache_dir='./cache')
+    model = AutoModelWithLMHead.from_pretrained(params["model_type"], config=config, cache_dir='./cache')
     model.to(params['device'])
 
     # -----------------------------------------------

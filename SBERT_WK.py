@@ -120,10 +120,10 @@ if __name__ == "__main__":
     # Set Model
     params_senteval = vars(args)
 
-    config = AutoConfig.from_pretrained(params_senteval["model_type"])
+    config = AutoConfig.from_pretrained(params_senteval["model_type"], cache_dir='./cache')
     config.output_hidden_states = True
-    tokenizer = AutoTokenizer.from_pretrained(params_senteval["model_type"])
-    model = AutoModelWithLMHead.from_pretrained(params_senteval["model_type"], config=config)
+    tokenizer = AutoTokenizer.from_pretrained(params_senteval["model_type"], cache_dir='./cache')
+    model = AutoModelWithLMHead.from_pretrained(params_senteval["model_type"], config=config, cache_dir='./cache')
 
     params_senteval['tokenizer'] = tokenizer
     params_senteval['model'] = model
