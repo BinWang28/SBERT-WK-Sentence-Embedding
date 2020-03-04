@@ -182,7 +182,7 @@ Many thanks for
 
 1. [Transformer repo](https://github.com/huggingface/transformers)
 2. [Sentence-BERT repo](https://github.com/UKPLab/sentence-transformers) in providing pretained models and easy to use architecture.
-3. Thanks for SentEval for evlaluation toolkit. [SentEval](https://github.com/facebookresearch/SentEval)
+3. [SentEval](https://github.com/facebookresearch/SentEval) Evluation toolkit.
 
 
 
