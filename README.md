@@ -46,13 +46,13 @@ conda install -c anaconda scikit-learn
 
 We have more scripts for using different pre-trained models：
 
-- **bert-base-uncased**: 12 layers, released with paper [BERT](https://arxiv.org/abs/1810.04805)
-- **bert-base-nli**: 12 layers, released with paper [Sen-BERT](https://arxiv.org/abs/1908.10084)
+- **bert-base-nli**: 12 layers, [Model_Page](https://github.com/BinWang28/SBERT-WK-Sentence-Embedding/tree/master/scripts/bert-base-nli)
 - **bert-base-nli-stsb**: 12 layers, released with paper [Sen-BERT](https://arxiv.org/abs/1908.10084)
 
 
 ### Under preparation
 
+- **bert-base-uncased**: 12 layers, released with paper [BERT](https://arxiv.org/abs/1810.04805)
 - **bert-large-uncased**:
 - **bert-large-nli**:
 - **bert-large-nli-stsb**:
