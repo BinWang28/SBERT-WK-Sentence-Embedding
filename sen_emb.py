@@ -130,6 +130,8 @@ if __name__ == "__main__":
     with torch.no_grad():
         features = model(**inputs)[1]
 
+    # Reshape features from list of (batch_size, seq_len, hidden_dim) for each hidden state to list
+    # of (num_hidden_states, seq_len, hidden_dim) for each element in the batch.
     all_layer_embedding = list(
         np.array([hidden_state.cpu().numpy() for hidden_state in features]).swapaxes(
             0, 1
