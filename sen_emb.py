@@ -95,6 +95,8 @@ if __name__ == "__main__":
         features_input_ids.append(sent_ids)
         features_mask.append(sent_mask)
 
+    features_mask = np.array(features_mask)
+
     batch_input_ids = torch.tensor(features_input_ids, dtype=torch.long)
     batch_input_mask = torch.tensor(features_mask, dtype=torch.long)
     batch = [batch_input_ids.to(device), batch_input_mask.to(device)]
