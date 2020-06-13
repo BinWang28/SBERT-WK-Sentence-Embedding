@@ -99,21 +99,18 @@ if __name__ == "__main__":
     batch_input_mask = torch.tensor(features_mask, dtype=torch.long)
     batch = [batch_input_ids.to(device), batch_input_mask.to(device)]
 
-
     inputs = {"input_ids": batch[0], "attention_mask": batch[1]}
     model.zero_grad()
 
     with torch.no_grad():
         features = model(**inputs)[1]
 
-    features = [layer_emb.cpu().numpy() for layer_emb in features]
-    all_layer_embedding = []
-    for i in range(features[0].shape[0]):
-        all_layer_embedding.append(np.array([layer_emb[i] for layer_emb in features]))
+    # Reshape features from list of (batch_size, seq_len, hidden_dim) for each hidden state to list
+    # of (num_hidden_states, seq_len, hidden_dim) for each element in the batch.
+    all_layer_embedding = list(np.array(features).swapaxes(0, 1))
 
     embed_method = utils.generate_embedding(params['embed_method'], features_mask)
     embedding = embed_method.embed(params, all_layer_embedding)
 
-    
     similarity = embedding[0].dot(embedding[1]) / np.linalg.norm(embedding[0]) / np.linalg.norm(embedding[1])
     print('The similarity between these two sentences are (from 0-1):', similarity)
