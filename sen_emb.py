@@ -132,11 +132,7 @@ if __name__ == "__main__":
 
     # Reshape features from list of (batch_size, seq_len, hidden_dim) for each hidden state to list
     # of (num_hidden_states, seq_len, hidden_dim) for each element in the batch.
-    all_layer_embedding = list(
-        np.array([hidden_state.cpu().numpy() for hidden_state in features]).swapaxes(
-            0, 1
-        )
-    )
+    all_layer_embedding = torch.stack(features).permute(1, 0, 2, 3).cpu().numpy()
 
     embed_method = utils.generate_embedding(params["embed_method"], features_mask)
     embedding = embed_method.embed(params, all_layer_embedding)
