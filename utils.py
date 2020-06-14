@@ -22,7 +22,7 @@ class generate_embedding():
         """
             Average the output from last layer
         """
-        unmask_num = np.array([sum(mask) for mask in self.masks])
+        unmask_num = np.sum(self.masks, axis=1) - 1 # Not considering the last item
         
         embedding = []
         for i in range(len(unmask_num)):
@@ -40,7 +40,7 @@ class generate_embedding():
         """
             Average the output from last layer
         """
-        unmask_num = np.array([sum(mask) for mask in self.masks])
+        unmask_num = np.sum(self.masks, axis=1) - 1 # Not considering the last item
         
         embedding = []
         for i in range(len(unmask_num)):
@@ -58,7 +58,7 @@ class generate_embedding():
         """
             CLS vector as embedding
         """
-        unmask_num = np.array([sum(mask) for mask in self.masks])
+        unmask_num = np.sum(self.masks, axis=1) - 1 # Not considering the last item
         
         embedding = []
         for i in range(len(unmask_num)):
@@ -75,7 +75,7 @@ class generate_embedding():
         """
             dissecting deep contextualized model
         """
-        unmask_num = np.array([sum(mask) for mask in self.masks]) - 1 # Not considering the last item
+        unmask_num = np.sum(self.masks, axis=1) - 1 # Not considering the last item
         all_layer_embedding = np.array(all_layer_embedding)[:,params['layer_start']:,:,:] # Start from 4th layers output
 
         embedding = []
