@@ -66,12 +66,17 @@ def batcher(params, batch):
 
     with torch.no_grad():
         features = model(**inputs)[1]
-
+        
+    '''
     features = [layer_emb.cpu().numpy() for layer_emb in features]
     all_layer_embedding = []
     for i in range(features[0].shape[0]):
         all_layer_embedding.append(np.array([layer_emb[i] for layer_emb in features]))
+    '''
+    
+    all_layer_embedding = torch.stack(features).permute(1, 0, 2, 3).cpu().numpy()
 
+    
     embed_method = utils.generate_embedding(params['embed_method'], features_mask)
     embedding = embed_method.embed(params, all_layer_embedding)
 
