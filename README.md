@@ -159,6 +159,16 @@ The following scripts are provided to reproduce more results:
 If you find our model is useful in your research, please consider cite our paper: [SBERT-WK: A Sentence Embedding Method By Dissecting BERT-based Word Models](https://arxiv.org/abs/2002.06652):
 
 ``` 
+@ARTICLE{SBERT-WK,
+  author={B. {Wang} and C. -. J. {Kuo}},
+  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing}, 
+  title={{SBERT-WK}: A Sentence Embedding Method by Dissecting {BERT}-Based Word Models}, 
+  year={2020},
+  volume={28},
+  pages={2146-2157},}
+```
+
+```
 @article{SBERT-WK,
     title = {{SBERT-WK}: A Sentence Embedding Method By Dissecting BERT-based Word Models},
     author = {Wang, Bin and Kuo, C-C Jay},
