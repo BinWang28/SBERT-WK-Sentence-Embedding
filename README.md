@@ -177,6 +177,8 @@ If you find our model is useful in your research, please consider cite our paper
 }
 ```
 
+One paper that shows SBERT-WK works well in real world applications: https://arxiv.org/pdf/2009.02931.pdf
+
 Contact person: Bin Wang, bwang28c@gmail.com
 
 http://mcl.usc.edu/
