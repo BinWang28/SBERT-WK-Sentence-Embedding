@@ -3,6 +3,8 @@
 <img src="figure1.png" alt="Paris" class="center" width="500">
 </p>
 
+Update 01-28-20: may entend/update in the future
+
 SBERT-WK provides a way to generate sentence embedding by dissecting deep contextualized models. Because pre-trained language models are quite powerful in a wide range of NLP tasks, but how to generate sentence embedding from deep language models is still challenging. Deep models mostly provide word/token level representation. Previous approaches includes averaging token representations or use CLS tokens provides rather poor performance in either textual similarity tasks, clustering and supervised tasks. Through geometric analysis, our model is capable in finding salient components in representation arocss layers and unified token representations. We evaluate our approach on a wide range of tasks and showed its effectiveness.
 
 Our model is applicable to any deep contextualized models and requires no further training. Details of our method can be found in our publication: [SBERT-WK](https://arxiv.org/abs/2002.06652).
